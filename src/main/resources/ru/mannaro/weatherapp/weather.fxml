@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="690.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mannaro.weatherapp.Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <AnchorPane prefHeight="720.0" prefWidth="620.0" style="-fx-background-color: #C0C0C0;">
+        <children>
+         <ImageView fitHeight="536.0" fitWidth="621.0" layoutX="1.0" layoutY="114.0">
+            <image>
+               <Image url="@pngwing.com%20(3).png" />
+            </image>
+         </ImageView>
+            <TextField fx:id="city" alignment="CENTER" layoutX="61.0" layoutY="133.0" prefHeight="42.0" prefWidth="493.0" promptText="Введите название города" style="-fx-border-color: #C0C0C0; -fx-background-radius: 4; -fx-background-color: #ffffff66;" text="введите город">
+                <font>
+                    <Font name="Georgia Bold" size="25.0" />
+                </font>
+            </TextField>
+            <Button fx:id="getData" layoutX="188.0" layoutY="196.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="240.0" style="-fx-background-radius: 10;" text="показать прогноз" textAlignment="CENTER" textFill="#5d5e5e">
+                <font>
+                    <Font name="Arial Black" size="20.0" />
+                </font>
+            </Button>
+            <Text fx:id="temp_info" fill="#5d5e5e" layoutX="41.0" layoutY="393.0" stroke="#e8e8e8" strokeType="OUTSIDE" text="ТЕМПЕРАТУРА:" wrappingWidth="463.13671875">
+                <font>
+                    <Font name="Arial Black" size="30.0" />
+                </font>
+            </Text>
+<!--            <AnchorPane prefHeight="115.0" prefWidth="551.0" style="-fx-background-image: url('file:E:/Image/700sng.jpurl('file:E:/Image/700sng.jpg');">-->
+            <AnchorPane prefHeight="115.0" prefWidth="551.0">
+                <children>
+                    <ImageView fitHeight="115.0" fitWidth="621.0" layoutY="-3.0">
+                        <image>
+                            <Image url="@istockphoto-531889697-1024x1024.jpg" />
+                        </image>
+                    </ImageView>
+                    <Text layoutX="70.0" layoutY="84.0" stroke="#7692c9f7" strokeType="OUTSIDE" text="ПОГОДНИК" textAlignment="CENTER" wrappingWidth="481.0">
+                        <font>
+                            <Font name="Arial Black" size="75.0" />
+                        </font>
+                        <fill>
+                            <LinearGradient endX="0.2985781990521327" endY="0.3744075829383886" startX="0.2985781990521327" startY="0.4739336492890996">
+                                <stops>
+                                    <Stop>
+                                        <color>
+                                            <Color red="0.05400000140070915" green="0.05400000140070915" blue="0.36000001430511475" opacity="0.4541984796524048" />
+                                        </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                        <color>
+                                            <Color red="0.5184000134468079" green="0.6107400059700012" blue="0.8100000023841858" opacity="0.2328244298696518" />
+                                        </color>
+                                    </Stop>
+                                </stops>
+                            </LinearGradient>
+                        </fill>
+                        <cursor>
+                            <Cursor fx:constant="OPEN_HAND" />
+                        </cursor>
+                    </Text>
+                </children>
+            </AnchorPane>
+            <Text fx:id="temp_feels" fill="#5d5e5e" layoutX="61.0" layoutY="439.0" stroke="#e8e8e8" strokeType="OUTSIDE" text="ОЩУЩАЕТСЯ:" wrappingWidth="463.13671875">
+                <font>
+                    <Font name="Arial Black" size="30.0" />
+                </font>
+            </Text>
+         <AnchorPane layoutY="265.0" opacity="0.32" prefHeight="86.0" prefWidth="621.0" style="-fx-background-color: #5d5e5e;">
+            <effect>
+               <InnerShadow />
+            </effect>
+         </AnchorPane>
+         <ImageView fitHeight="64.0" fitWidth="65.0" layoutX="539.0" layoutY="278.0">
+            <image>
+               <Image url="@free-icon-rainy-day.png" />
+            </image>
+         </ImageView>
+              <Text fill="#434343" layoutX="25.0" layoutY="331.0" stroke="#ffffff66" strokeType="OUTSIDE" strokeWidth="2.0" text="Информация" textAlignment="CENTER" wrappingWidth="518.0">
+                  <font>
+                      <Font name="Arial Black" size="65.0" />
+                  </font>
+              </Text>
+            <Text fx:id="sunrise" fill="#5d5e5e" layoutX="142.0" layoutY="481.0" stroke="#e8e8e8" strokeType="OUTSIDE" text="ВОСХОД:" wrappingWidth="375.13671875">
+                <font>
+                    <Font name="Arial Black" size="30.0" />
+                </font>
+            </Text>
+            <Text fx:id="sunset" fill="#5d5e5e" layoutX="178.0" layoutY="526.0" stroke="#e8e8e8" strokeType="OUTSIDE" text="ЗАКАТ:" wrappingWidth="375.13671875">
+                <font>
+                    <Font name="Arial Black" size="30.0" />
+                </font>
+            </Text>
+            <Text fx:id="pressure" fill="#5d5e5e" layoutX="100.0" layoutY="565.0" stroke="#e8e8e8" strokeType="OUTSIDE" text="ДАВЛЕНИЕ:" wrappingWidth="507.13671875">
+                <font>
+                    <Font name="Arial Black" size="30.0" />
+                </font>
+            </Text>
+         <Text fill="#520707ce" layoutX="482.0" layoutY="639.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Created by Mannaro" wrappingWidth="122.779296875">
+            <font>
+               <Font name="Belepotan RUS" size="11.0" />
+            </font>
+         </Text>
+         <ImageView layoutX="423.0" layoutY="196.0">
+            <image>
+               <Image url="@pngwwedwding.com%20(2).png" />
+            </image>
+         </ImageView>
+         <Text fx:id="humidity" fill="#5d5e5e" layoutX="67.0" layoutY="607.0" stroke="#e8e8e8" strokeType="OUTSIDE" text="ВЛАЖНОСТЬ:" wrappingWidth="463.13671875">
+            <font>
+               <Font name="Arial Black" size="30.0" />
+            </font>
+         </Text>
+        </children>
+    </AnchorPane>
+</VBox>
