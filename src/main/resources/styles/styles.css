@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "RedOctober";
+    src: url("RedOctober-Fat.ttf");
+}
+body {
+    -fx-font-family: RedOctober;
+}
