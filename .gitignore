@@ -7,6 +7,7 @@ build/
 *.log
 .idea/
 .mvn/
+*.bak
 
 
 

@@ -15,11 +15,12 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("weather.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 690);
-        scene.getStylesheets().add(getClass().getResource("/styles/styles.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
         stage.setResizable(false);
         stage.setTitle("Погода");
         stage.setScene(scene);
-        stage.getIcons().add(new Image(new FileInputStream(Path.of("src","main", "resources", "ru", "mannaro", "weatherapp", "images.jpeg").toFile())));
+//        stage.getIcons().add(new Image(new FileInputStream(Path.of("src","main", "resources", "ru", "mannaro", "weatherapp", "images.jpeg").toFile())));
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/ru/mannaro/weatherapp/images.jpeg")));
         stage.show();
     }
 
