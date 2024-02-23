@@ -58,7 +58,7 @@ public class Controller {
         getData.setOnAction(event -> {
             String getUserCity = city.getText().trim();
             if (!getUserCity.equals("")) {
-                String output = getUrlContent("https://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=37bf02f98b81caee337dfc7129bfaa53&units=metric");
+                String output = getUrlContent("https://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=your_API&units=metric");
                 if (!output.isEmpty()) {
                     JSONObject obj = new JSONObject(output);
                     //Преобразование температуры и вывод с одной цифрой после точки
